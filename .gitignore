@@ -1,0 +1,7 @@
+server/node_modules/**
+server/public/lib/**
+/server/node_modules/**
+/server/public/lib/**
+server/temp/**
+/server/temp/**
+/server/package-lock.json

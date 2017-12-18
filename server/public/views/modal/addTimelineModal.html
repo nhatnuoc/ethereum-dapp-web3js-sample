@@ -1,0 +1,46 @@
+<div class="modal-header bg-dark" style="padding : 7px">
+    <h5>Save your moment forever</h3>
+</div>
+<div class="modal-body">
+    <button class="btn timeline-item-icon bg-warning" style="margin-left: 120px;border-radius : 50% ;width : 60px; height : 60px;margin-right: 170px;"
+        ng-click="chooseModeUpload('TEXT')">
+        <span class="fa fa-pencil-square-o" style="font-size : 20px"></span>
+    </button>
+    <button class="btn timeline-item-icon bg-primary" style="border-radius : 50% ; width : 60px; height : 60px" ng-click="chooseModeUpload('FILE_UPLOAD')">
+        <span class="fa fa-file-text-o" style="font-size : 20px"></span>
+    </button>
+    <div data-ng-show="modeUpload == 'FILE_UPLOAD'">
+        <div style="margin-top: 30px;background-color: aliceblue;">
+            <input type="file" title="Choose file" ng-file-select="onFileSelect($files)" id="fileUploadChoser" data-ng-model = "fileAttach" data-ui-file-upload>
+        </div>
+        <div class="square-blue pv-15">
+                <label class="ui-checkbox">
+                  <input name="checkbox1" type="checkbox" data-ng-model="checkPrivate" value="option1">
+                  <span>
+                    <strong> Private </strong>
+                  </span>
+                </label>
+              </div>
+    </div>
+    <div ng-show="modeUpload == 'TEXT'">
+        <div text-angular data-ng-model="mailContent" class="ui-editor">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="square-blue pv-15">
+                <label class="ui-checkbox">
+                  <input name="checkbox1" type="checkbox" data-ng-model="checkPrivate" value="option1">
+                  <span>
+                    <strong> Private </strong>
+                  </span>
+                </label>
+              </div>
+    </div>
+
+</div>
+<div class="modal-footer " style="padding : 7px ">
+    <!-- <button class="btn btn-primary " ng-click="ok() ">OK</button> -->
+    <button class="btn btn-success " ng-click="ok() ">Submit</button>
+    <button class="btn" ng-click="cancel() ">Cancel</button>
+</div>

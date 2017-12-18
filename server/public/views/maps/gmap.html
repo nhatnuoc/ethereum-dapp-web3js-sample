@@ -1,0 +1,129 @@
+<!-- Site Setting Panel -->
+  <div id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></div>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h3><i class="fa fa-map-marker"></i> Gmap </h3>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Gmap </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Google <strong> Map </strong></h4>
+                    <div class="panel-body">
+                       <map class="ui-map" zoom="11" center="[40.74, -74.18]" scrollwheel="false">
+                          <marker position="[40.72, -74.20]" title="marker" animation="Animation.DROP"></marker>
+                          <marker position="[40.73, -74.19]" title="drag me" draggable="true"></marker>
+                      </map>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Google <strong> Dynamic Map </strong></h4>
+                    <div class="panel-body" data-ng-controller="MapDemoCtrl">
+                       <map class="ui-map" zoom="14" center="[43.6650000, -79.4103000]"></map>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Custom <strong> Google Map </strong></h4>
+                    <div class="panel-body">
+                       <map class="ui-map" zoom="11" center="[40.73, -74.19]"
+                            scrollwheel="false"
+                            styles='[{"featureType": "all", "stylers": [{ "saturation": -100 } ] }]'>
+                           <marker position="[40.73, -74.19]" title="drag me" draggable="true"></marker>
+                       </map>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Google <strong> street view</strong></h4>
+                    <div class="panel-body">
+                          <map center="[40.6892,-74.0444]" zoom="18" 
+                            map-type-id="MapTypeId.SATELLITE" tilt="45" style="float:left"
+                             street-view="StreetViewPanorama(document.querySelector('#sv'), {position:new google.maps.LatLng(40.688738,-74.043871)})">
+                          </map>
+                             <div id="sv" class="height-300"></div>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Custom <strong> Popup Message </strong></h4>
+                    <div class="panel-body">
+                      <div id="my-html">
+                        <map center="[40.74, -74.18]" />
+                      </div>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Google Map <strong> Marker </strong></h4>
+                    <div class="panel-body">
+                      <div id="my-html">
+                        <map zoom="11" center="[40.74, -74.18]">
+                          <marker position="[40.71, -74.21]" title="hello"></marker>
+                          <marker position="[40.80, -73.95]" title="marker" animation="Animation.BOUNCE"></marker>
+                          <marker position="[40.73, -74.19]" title="drag me" draggable="true"></marker>
+                          <marker position="[40.74, -74.18]" title="how" animation="Animation.BOUNCE"></marker>
+                          <marker position="[40.75, -74.17]" title="are"></marker>
+                          <marker position="[40.76, -74.16]" title="you" icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"></marker>
+                          <marker position="[40.77, -74.15]" title="from"></marker>
+                          <marker position="[40.78, -74.14]" title="allen" centered="true"></marker>
+                        </map>
+                      </div>
+                    </div>
+               </section>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12">
+               <section class="panel panel-default">
+                  <h4 class="nm pad-15"> Map Custom <strong> Shape </strong></h4>
+                    <div class="panel-body">
+                      <map zoom="11" center="[40.74, -74.18]">
+                        <shape name="polyline" geodesic="true" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2"
+                           path="[[40.74,-74.18],[40.64,-74.10],[40.54,-74.05],[40.44,-74]]" editable="true"/>
+                        <shape name="polygon" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2"
+                           paths="[[40.74,-74.18],[40.64,-74.18],[40.84,-74.08],[40.74,-74.18]]" editable="true"/>
+                        <shape name="rectangle" stroke-color='#FF0000' stroke-opacity="0.8" stroke-weight="2"
+                           bounds="[[40.75,-74.50], [40.78,-74.30]]" editable="true" />
+                        <shape name="circle" stroke-color='#FF0000' stroke-opacity="0.8"stroke-weight="2" 
+                           center="[40.80,-74.25]" radius="4000" editable="true" />
+                      </map>
+                    </div>
+               </section>
+            </div>
+         </div>
+     </div>

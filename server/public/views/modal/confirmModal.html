@@ -1,0 +1,12 @@
+<div class="modal-header bg-dark" style="padding : 7px">
+        <h5>{{title}}</h3>
+    </div>
+    <div class="modal-body">
+     <p style="font-size : 15">{{message}}</p>
+    </div>
+    <div class="modal-footer " style="padding : 7px ">
+        
+        <button data-ng-if="mode == 'CONFIRM'" class="btn btn-success " ng-click="$close() ">Yes</button>
+        <button data-ng-if="mode == 'CONFIRM'" class="btn" ng-click="$dismiss() ">No</button>
+        <button data-ng-if="mode == 'REPORT'" class="btn" ng-click="$dismiss() ">OK</button>
+    </div>

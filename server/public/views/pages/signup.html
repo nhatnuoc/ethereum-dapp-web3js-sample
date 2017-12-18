@@ -1,0 +1,57 @@
+<div class="lock-wrapper">
+  <div class="panel lock-box">
+    <div class="center">
+      <img alt="" src="images/photos/user.png" class="img-circle" /> </div>
+    <h4> Hello Guest !</h4>
+    <p class="text-center">Register new account</p>
+    <div class="row">
+      <form action="index.html" class="form-inline" role="form">
+        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+          <div class="iconic-input right">
+            <label for="firstName" class="text-muted">Fisrt name</label>
+            <input id="firstName" type="text" ng-model = "firstName" placeholder="Enter fistname" class="form-control ph-15" required="required"
+            />
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="iconic-input right">
+              <label for="lastName" class="text-muted">Last name</label>
+              <input id="lastName" type="text" ng-model = "lastName" placeholder="Enter lastname" class="form-control ph-15" required="required"
+              />
+              <i class="fa fa-user"></i>
+            </div>
+          <div class="iconic-input right">
+            <label for="signupInputEmail" class="text-muted">Email address</label>
+            <input id="signupInputEmail" type="email" ng-model = "email" placeholder="Enter email" class="form-control ph-15" required="required" />
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="iconic-input right">
+            <label for="signupInputPassword" class="text-muted">Password</label>
+            <input id="signupInputPassword" type="password" ng-model = "password" placeholder="Password" class="form-control lock-input" required="required"
+            />
+            <i class="fa fa-lock"></i>
+          </div>
+          <div class="iconic-input right">
+            <label for="reSignupInputPassword" class="text-muted">Retype Password</label>
+            <input id="reSignupInputPassword" type="password" ng-model = "rePassword" placeholder="Retype Password" class="form-control lock-input" required="required"
+            />
+            <i class="fa fa-lock"></i>
+          </div>
+          <div class="square-blue pull-left pv-15">
+            <label class="ui-checkbox">
+              <input name="checkbox1" type="checkbox" ng-model="checkAgree" value="option1">
+              <span>
+                <strong> I agree with the terms </strong>
+              </span>
+            </label>
+          </div>
+          <button type="button" class="btn btn-block btn-primary" ng-click="register()">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="registration"> Already registered !
+    <a href="#/pages/signin">
+      <span class="text-primary"> Please Login </span>
+    </a>
+  </div>
+</div>

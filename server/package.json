@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "name": "",
+  "author": "error_404",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.0.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "express-fileupload": "^0.3.0",
+    "file-encryptor": "^0.1.1",
+    "globals": "^9.12.0",
+    "jsonfile": "^4.0.0",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.7.0",
+    "node-rsa": "^0.4.2",
+    "ora": "^0.3.0",
+    "parse-json": "^4.0.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "qr-image": "^3.2.0",
+    "sha256": "^0.2.0",
+    "superagent": "^3.3.2",
+    "truffle-contract": "^3.0.1",
+    "web3": "github:ethereum/web3.js",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "webpack-dev-middleware": "^1.8.4"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js"
+  }
+}

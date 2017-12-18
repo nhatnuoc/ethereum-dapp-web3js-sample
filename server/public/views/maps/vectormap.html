@@ -1,0 +1,41 @@
+<!-- Site Setting Panel -->
+  <div id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></div>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h3><i class="fa fa-map-marker"></i> Vector Map </h3>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Vector Map </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+
+         <div class="row">
+            <div class="col-md-12">
+                <section class="panel panel-default" data-ng-controller="jvectormapCtrl">
+                    <h4 class="nm pad-15"> Google Vector Map - <strong> World </strong></h4>
+                      <div class="panel-body">
+                        <div class="ui-map" data-ui-jvectormap options="Jvworldmap"></div>
+                      </div>
+                </section>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+                <section class="panel panel-default" data-ng-controller="jvectormapCtrl">
+                    <h4 class="nm pad-15"> Google Vector Map - <strong> USA </strong></h4>
+                      <div class="panel-body">
+                        <div class="ui-map" data-ui-jvectormap options="Jvusamap"></div>
+                      </div>
+                </section>
+            </div>
+         </div>
+
+</div>

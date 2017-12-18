@@ -1,0 +1,81 @@
+<!-- Site Setting Panel -->
+<!-- <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section> -->
+<!-- Site Setting Panel End -->
+
+<!-- <div class="pageheader">
+  <h3><i class="fa fa-sitemap"></i> Timeline </h3>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Timeline </li>
+    </ol>
+  </div>
+</div> -->
+
+<div class="page">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-default">
+                    <!-- START timeline-->
+                    <div class="panel-body">
+                        <div class="row text-center">
+
+                            <img alt="" src="images/photos/user2.png" class="img-circle" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <!-- START TIMELINE -->
+                                <div class="profile-timeline timeline-right">
+
+                                    <!-- START TIMELINE ITEM -->
+                                    <div class="timeline-item timeline-main">
+                                        <div class="timeline-date bg-primary">Now</div>
+                                    </div>
+                                    <!-- END TIMELINE ITEM -->
+                                    <!-- START TIMELINE ITEM -->
+                                    <div class="timeline-item timeline-item-right" data-ng-repeat="moment in momentList track by $index">
+                                        <div class="timeline-item-icon " ng-class="{'bg-purple' : moment.status == 0,'bg-danger' : moment.status == 1}">
+                                            <span data-ng-if="moment.status == 0" class="fa fa-check" style="margin-top : 10px"></span>
+                                            <span data-ng-if="moment.status == 1" class="fa fa-lock" style="margin-top : 10px"></span>
+                                        </div>
+                                        <div class="timeline-item-content">
+                                            <div class="timeline-heading">{{ moment.created_date | date : "hh:mm a,dd/MM/yyyy"}}</div>
+                                            <div class="timeline-body">
+                                                <!-- <img src="images/gallery/image1.png" alt="" class="img-text" width="150" align="left"/> -->
+                                                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</h4> -->
+                                                <p data-ng-if='moment.type == 0' ng-bind-html="moment.content"></p>
+                                                <div ng-if="moment.type == 1">
+                                                    <a href="#" data-gallery data-ng-if="moment.typeFile == 'IMAGE'">
+                                                        <img data-ng-src="{{moment.content}}">
+                                                    </a>
+                                                    <video data-ng-if="moment.typeFile == 'VIDEO'" data-ng-src="{{moment.content}}" controls></video>
+                                                    <audio controls data-ng-if="moment.typeFile == 'AUDIO'">
+                                                        <source data-ng-src="{{moment.content}}" type="audio/mpeg">
+                                                    </audio>
+                                                    <div data-ng-if="moment.typeFile == 'DOC'">
+                                                        <a target="_blank" href="{{moment.content}}">
+                                                            <span class="fa fa-file-pdf-o" style="font-size: 50px;">
+                                                                <span style="font-size : 15px">{{moment.filename}}</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END TIMELINE ITEM -->
+
+                                </div>
+                                <!-- END TIMELINE -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END timeline-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
